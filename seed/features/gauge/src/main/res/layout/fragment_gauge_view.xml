@@ -1,0 +1,42 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context="fr.renault.android.instantapps.gauge.GaugeViewFragment">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:text="@string/fuel_level"/>
+
+    <SeekBar
+        android:id="@+id/seekBar_fuel_level"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_weight="1"
+        android:max="50"
+        android:progress="25"
+        android:progressDrawable="@drawable/custom_seek_progress"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:text="@string/service_due_in"/>
+
+    <SeekBar
+        android:id="@+id/seekBar_service_due_in"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_weight="1"
+        android:max="100"
+        android:progress="25"
+        android:progressDrawable="@drawable/custom_seek_progress"/>
+</LinearLayout>

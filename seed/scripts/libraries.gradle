@@ -1,0 +1,11 @@
+
+buildscript {
+    ext.commonLibraries = [
+        glassfishAnnotations: 'org.glassfish:javax.annotation:10.0-b28',
+        dagger: 'com.google.dagger:dagger:2.12',
+        daggerAndroidSupport: 'com.google.dagger:dagger-android-support:2.12',
+        daggerCompiler: 'com.google.dagger:dagger-compiler:2.12',
+        daggerAndroidProcessor: 'com.google.dagger:dagger-android-processor:2.12',
+    ].asImmutable()
+
+}

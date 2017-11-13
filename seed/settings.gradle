@@ -1,0 +1,1 @@
+include ':installed', 'instant', ':features:base', ':features:gauge', ':features:map'
