@@ -18,11 +18,19 @@ android {
 }
 
 dependencies {
+    implementation project(":features:base")
     implementation project(":features:map")
     implementation project(":features:gauge")
+    implementation project(":features:orchestrator")
     api "com.android.support:appcompat-v7:${rootProject.supportLib}"
     implementation "com.android.support:support-v4:$rootProject.supportLib"
     implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    implementation 'org.greenrobot:eventbus:3.1.1'
+    implementation 'org.funktionale:funktionale-composition:1.1'
+    implementation 'org.funktionale:funktionale-currying:1.1'
+    implementation 'org.funktionale:funktionale-either:1.1'
+    implementation 'org.funktionale:funktionale-option:1.1'
+    implementation 'org.funktionale:funktionale-pipe:1.1'
 }
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'

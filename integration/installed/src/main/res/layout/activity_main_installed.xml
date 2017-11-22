@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.renault.instantapps.poc.MainInstalledActivity">
+
+    <include layout="@layout/toolbar"/>
+
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:weightSum="3"
+                  android:paddingBottom="17dp"
+                  android:orientation="vertical">
+        <fragment android:name="com.renault.android.instantapps.map.MapViewFragment"
+                  android:layout_width="match_parent"
+                  android:layout_height="0dp"
+                  android:layout_weight="2"
+                  android:id="@+id/installed_map_view_fragment"/>
+        <fragment android:name="fr.renault.android.instantapps.gauge.GaugeViewFragment"
+                  android:layout_width="match_parent"
+                  android:layout_height="0dp"
+                  android:layout_weight="1"
+                  android:id="@+id/installed_gauge_view_fragment"/>
+        <fragment
+            android:name="com.renault.easyrider.instantapps.orchestrator.OrchestrationFragment"
+            android:id="@+id/installed_orchestrator_view_fragment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+</LinearLayout>

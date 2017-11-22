@@ -1,0 +1,33 @@
+apply plugin: 'com.android.feature'
+apply plugin: 'kotlin-android'
+
+android {
+    compileSdkVersion rootProject.compileSdk
+    buildToolsVersion rootProject.buildTools
+    defaultConfig {
+        minSdkVersion rootProject.minSdk
+        targetSdkVersion rootProject.compileSdk
+        versionCode rootProject.versionCode
+        versionName rootProject.versionName
+    }
+    buildTypes {
+        release {}
+        debug {}
+    }
+}
+
+dependencies {
+    implementation project(':features:base')
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+//    implementation 'com.android.support:design:26.1.0'
+    implementation "com.android.support:design:$rootProject.supportLib"
+    implementation 'org.greenrobot:eventbus:3.1.1'
+    implementation 'org.funktionale:funktionale-composition:1.1'
+    implementation 'org.funktionale:funktionale-currying:1.1'
+    implementation 'org.funktionale:funktionale-either:1.1'
+    implementation 'org.funktionale:funktionale-option:1.1'
+    implementation 'org.funktionale:funktionale-pipe:1.1'
+    implementation "com.android.support:support-v4:$rootProject.supportLib"
+    compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+}
+apply plugin: 'kotlin-android-extensions'

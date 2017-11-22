@@ -12,6 +12,7 @@
             <option value="$PROJECT_DIR$/features/base" />
             <option value="$PROJECT_DIR$/features/gauge" />
             <option value="$PROJECT_DIR$/features/map" />
+            <option value="$PROJECT_DIR$/features/orchestrator" />
             <option value="$PROJECT_DIR$/installed" />
             <option value="$PROJECT_DIR$/instant" />
           </set>

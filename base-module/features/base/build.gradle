@@ -1,0 +1,30 @@
+apply plugin: 'com.android.feature'
+apply plugin: 'kotlin-android'
+
+android {
+    compileSdkVersion rootProject.compileSdk
+    buildToolsVersion rootProject.buildTools
+
+    defaultConfig {
+        minSdkVersion rootProject.minSdk
+        targetSdkVersion rootProject.compileSdk
+        versionCode rootProject.versionCode
+        versionName rootProject.versionName
+    }
+    buildTypes {
+        release {}
+        debug {}
+    }
+
+    baseFeature true
+}
+
+dependencies {
+    application project(":installed")
+    feature project(':features:new_module')
+    api "com.android.support:appcompat-v7:${rootProject.supportLib}"
+    compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+}
+repositories {
+    mavenCentral()
+}

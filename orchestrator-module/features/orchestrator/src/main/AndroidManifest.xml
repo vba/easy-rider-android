@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.renault.easyrider.instantapps.orchestrator">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <application android:label="@string/app_name">
+        <activity
+            android:name=".OrchestratorModuleActivity"
+            android:label="@string/title_activity_main_map"
+            android:theme="@android:style/Theme.NoTitleBar">
+
+            <!--<intent-filter android:label="@string/app_name">-->
+                <!--<action android:name="android.intent.action.MAIN"/>-->
+                <!--<category android:name="android.intent.category.LAUNCHER"/>-->
+            <!--</intent-filter>-->
+            <intent-filter android:order="1">
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+
+                <data
+                    android:host="my.renault.com"
+                    android:pathPattern="/orchestrator"
+                    android:scheme="https"/>
+                <data
+                    android:host="my.renault.com"
+                    android:pathPattern="/orchestrator"
+                    android:scheme="http"/>
+            </intent-filter>
+
+            <meta-data
+                android:name="default-url"
+                android:value="https://my.renault.com/orchestrator"/>
+        </activity>
+
+
+    </application>
+
+</manifest>

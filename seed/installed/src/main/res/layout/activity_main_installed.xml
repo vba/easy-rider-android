@@ -26,4 +26,10 @@
                   android:id="@+id/installed_gauge_view_fragment"/>
     </LinearLayout>
 
+    <fragment
+        android:visibility="invisible"
+        android:name="com.renault.easyrider.instantapps.orchestrator.OrchestrationFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/orchestration_fragment"/>
 </LinearLayout>

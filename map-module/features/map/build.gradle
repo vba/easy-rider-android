@@ -1,0 +1,46 @@
+apply plugin: 'com.android.feature'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion rootProject.compileSdk
+    buildToolsVersion rootProject.buildTools
+
+    defaultConfig {
+        minSdkVersion rootProject.minSdk
+        targetSdkVersion rootProject.compileSdk
+        versionCode rootProject.versionCode
+        versionName rootProject.versionName
+    }
+    buildTypes {
+        release {}
+        debug {}
+    }
+}
+
+kapt {
+    generateStubs = true
+}
+
+dependencies {
+    implementation project(':features:base')
+    api('com.google.android.instantapps:instantapps:1.0.0') {
+        exclude group: 'com.android.support'
+    }
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+    implementation "com.android.support:appcompat-v7:$rootProject.supportLib"
+    implementation "com.android.support:palette-v7:$rootProject.supportLib"
+    implementation "com.android.support:mediarouter-v7:$rootProject.supportLib"
+    implementation "com.android.support:support-v4:$rootProject.supportLib"
+    implementation 'org.greenrobot:eventbus:3.1.1'
+    implementation 'org.funktionale:funktionale-composition:1.1'
+    implementation 'org.funktionale:funktionale-currying:1.1'
+    implementation 'org.funktionale:funktionale-either:1.1'
+    implementation 'org.funktionale:funktionale-option:1.1'
+    implementation 'org.funktionale:funktionale-pipe:1.1'
+
+    implementation "com.google.firebase:firebase-ads:$rootProject.playServices"
+    implementation "com.google.android.gms:play-services-maps:$rootProject.playServices"
+}

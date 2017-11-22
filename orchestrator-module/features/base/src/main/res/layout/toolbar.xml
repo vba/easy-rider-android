@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:paddingBottom="5dp"
+              android:clipToPadding="false"
+              xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:background="@android:color/background_light"
+        android:elevation="5dp"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:baselineAligned="true"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.25"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:background="@color/colorLeftYellowTitle"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:width="60dp"
+                    android:paddingEnd="7dp"
+                    android:paddingStart="7dp"
+                    android:text="@string/easy"
+                    android:textColor="#fff"
+                    android:textSize="@dimen/leftTitleSize"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:width="60dp"
+                    android:gravity="center"
+                    android:paddingEnd="7dp"
+                    android:paddingStart="7dp"
+                    android:text="@string/rider"
+                    android:textColor="@color/grayTitle"
+                    android:textSize="@dimen/leftTitleSize"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="19dp"
+                    android:text="@string/captur"
+                    android:textAlignment="center"
+                    android:textColor="@color/grayTitle"
+                    android:textSize="19sp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="0"
+                android:gravity="center_vertical|end"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5dp"
+                    android:width="30dp"
+                    android:height="30dp"
+                    android:background="@color/colorRightYellowTitle"
+                    android:textAlignment="textEnd"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5dp"
+                    android:width="30dp"
+                    android:height="30dp"
+                    android:background="@color/colorRightYellowTitle"
+                    android:textAlignment="textEnd"/>
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v7.widget.Toolbar>
+</LinearLayout>

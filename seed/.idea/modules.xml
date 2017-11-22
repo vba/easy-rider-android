@@ -8,7 +8,8 @@
       <module fileurl="file://$PROJECT_DIR$/installed/installed.iml" filepath="$PROJECT_DIR$/installed/installed.iml" />
       <module fileurl="file://$PROJECT_DIR$/instant/instant.iml" filepath="$PROJECT_DIR$/instant/instant.iml" />
       <module fileurl="file://$PROJECT_DIR$/features/map/map.iml" filepath="$PROJECT_DIR$/features/map/map.iml" />
-      <module fileurl="file://$PROJECT_DIR$/native-app.iml" filepath="$PROJECT_DIR$/native-app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/features/orchestrator/orchestrator.iml" filepath="$PROJECT_DIR$/features/orchestrator/orchestrator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/seed.iml" filepath="$PROJECT_DIR$/seed.iml" />
     </modules>
   </component>
 </project>

@@ -1,0 +1,41 @@
+
+
+
+buildscript {
+    ext.kotlin_version = '1.1.51'
+    repositories {
+        google()
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.0.0'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+    }
+}
+
+ext {
+    buildTools = '26.0.2'
+    compileSdk = 26
+    minSdk = 21
+    minSdkInstant = 21
+    versionCode = 1
+    versionName = "1.0"
+    supportLib = '27.0.0'
+    playServices = '11.4.2'
+}
+
+subprojects {
+    task allDeps(type: DependencyReportTask) {}
+}
+
+task ci {
+    group 'Continious integration'
+    description 'Produces a greeting'
+}

@@ -1,0 +1,7 @@
+<resources>
+    <string name="title_activity_main_map">MainMapActivity</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_orchestration_fragment">Orchestration fragment should remain invisible</string>
+    <string name="hello">Hello from new module</string>
+</resources>
